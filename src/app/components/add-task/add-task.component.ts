@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, EventEmitter, Output,  } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Task } from 'zone.js/lib/zone-impl';
 
 @Component({
   selector: 'app-add-task',
@@ -9,5 +10,14 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
   styleUrl: './add-task.component.css'
 })
 export class AddTaskComponent {
+  @Output() onSubmitTask = new EventEmitter<any>();
 
+  addTaskForms = new FormGroup({
+    task_name: new FormControl(""),
+    category: new FormControl("")
+  });
+  
+
+addTask() {
+}
 }

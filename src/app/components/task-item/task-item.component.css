@@ -1,6 +1,13 @@
 div {
-    border: 2px solid green;
     border-bottom: 3px black solid;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+
+div:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 54px 55px, rgba(0, 0, 0, 0.5) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 h1 {
@@ -8,5 +15,5 @@ h1 {
 }
 
 .concluded {
-    border: 5px solid green;
-  
+    outline: 5px solid green;
+}

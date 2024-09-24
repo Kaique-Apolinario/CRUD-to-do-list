@@ -1,23 +1,22 @@
 {
-    "tasks": [
-        {
-            "id": 1,
-            "task_name": "cum",
-            "category": "sex",
-            "finished": false
-        },
-        {
-            "id": 2,
-            "task_name": "pray",
-            "category": "religious",
-            "finished": false
-        },
-        {
-            "id": 3,
-            "task_name": "kill",
-            "category": "good vibes",
-            "finished": false
-        }
-    ]
-
+  "tasks": [
+    {
+      "id": "1",
+      "task_name": "abobra",
+      "category": "sex",
+      "finished": false
+    },
+    {
+      "id": "2",
+      "task_name": "papel",
+      "category": "religious",
+      "finished": false
+    },
+    {
+      "id": "3",
+      "task_name": "seila",
+      "category": "good vibes",
+      "finished": false
+    }
+  ]
 }

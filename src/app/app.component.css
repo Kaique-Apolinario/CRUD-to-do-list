@@ -29,6 +29,7 @@
     padding: 0px 50px 50px 50px;
     background-color: yellow;
     position: relative;
+    border-radius: 20px;
 }
 
 app-add-task{

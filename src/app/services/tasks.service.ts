@@ -20,8 +20,12 @@ export class TasksService {
     return this.http.post<Task>(this.apiUrl, task);
   }
 
-  toggleTask(task:Task){
-    this.http.put(this.apiUrl, task);
+  getById(id:Number):Observable<Task>{
+    return this.http.get<Task>(this.apiUrl);
+  }
+
+  updateTask(task:Task):Observable<Task>{
+    return this.http.put<Task>(this.apiUrl + "/"+ task.id, task);
   }
 
 }

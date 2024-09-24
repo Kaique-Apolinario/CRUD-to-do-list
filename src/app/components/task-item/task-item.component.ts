@@ -1,19 +1,20 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Task } from '../../../Task';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-task-item',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './task-item.component.html',
   styleUrl: './task-item.component.css'
 })
 export class TaskItemComponent {
   @Input() task!:Task;
-  @Output() toggleTask = new EventEmitter<Task>();
+  @Output() onToggleTask = new EventEmitter<Task>();
 
 
-  toggleTask(task:taskItem){
-    this.toggleTask.emit(task);
+  toggleTask(task:Task){
+    this.onToggleTask.emit(task);
   }
 }

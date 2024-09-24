@@ -29,8 +29,10 @@ export class TasksComponent implements OnInit {
   }
 
   toggleTask(task:Task) {
-    task.status = !task.status;
-    this.taskService.toggleTask(task);
+    task.finished = !task.finished;
+    this.taskService.updateTask(task).subscribe();
   }
+
+  
 }
 
