@@ -1,1 +1,1 @@
-<app-task-item *ngFor="let taskItem of tasksList" [task]="taskItem"></app-task-item>
+<app-task-item *ngFor="let taskItem of tasksList" [task]="taskItem" (toggleTask)="toggleTask($event)"></app-task-item>
