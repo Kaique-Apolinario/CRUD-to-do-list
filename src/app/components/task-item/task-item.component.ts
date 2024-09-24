@@ -10,4 +10,10 @@ import { Task } from '../../../Task';
 })
 export class TaskItemComponent {
   @Input() task!:Task;
+  @Output() toggleTask = new EventEmitter<Task>();
+
+
+  toggleTask(task:taskItem){
+    this.toggleTask.emit(task);
+  }
 }
