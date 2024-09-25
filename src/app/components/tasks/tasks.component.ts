@@ -3,6 +3,7 @@ import { TasksService } from '../../services/tasks.service';
 import { Task } from '../../../Task';
 import { CommonModule } from '@angular/common';
 import { TaskItemComponent } from '../task-item/task-item.component';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-tasks',
@@ -19,20 +20,21 @@ export class TasksComponent implements OnInit {
   constructor(private taskService: TasksService) { }
 
   ngOnInit(): void {
-    this.taskService.getTasks().subscribe((tasksList) =>
-      this.tasksList = tasksList
-    )
+    this.getTasks();
   }
 
-  addTasks(task:Task) {
-    this.taskService.addTask(task).subscribe();
-  }
+  getTasks() {
+  this.taskService.getTasks().subscribe((tasksList) =>
+    this.tasksList = tasksList)
+}
 
-  toggleTask(task:Task) {
-    task.finished = !task.finished;
-    this.taskService.updateTask(task).subscribe();
-  }
+addTasks(task: FormGroup) {
+  this.taskService.addTask(task.value).subscribe();
+}
 
-  
+toggleTask(task: Task) {
+  task.finished = !task.finished;
+  this.taskService.updateTask(task).subscribe();
+}
 }
 
