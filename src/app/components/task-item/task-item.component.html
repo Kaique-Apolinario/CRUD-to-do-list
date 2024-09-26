@@ -1,3 +1,4 @@
-<div (dblclick)="toggleTask(task)" [ngClass]="{'concluded' : task.finished}">
+<div class="taskLine" (dblclick)="toggleTask(task)" [ngClass]="{'concluded' : task.finished}">
     <h1>{{task.task_name}}</h1>
+    <fa-icon [icon]="faTrash" class="fa-solid fa-5x" (click)="deleteTask(task)"></fa-icon>
 </div>

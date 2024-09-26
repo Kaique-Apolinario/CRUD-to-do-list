@@ -17,3 +17,13 @@ h1 {
 .concluded {
     outline: 5px solid green;
 }
+
+.taskLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa-solid:hover {
+    color: red;
+    filter: drop-shadow(0px 0px 5px rgb(0 0 0 / 1));}

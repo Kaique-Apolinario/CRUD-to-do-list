@@ -26,17 +26,21 @@ export class TasksComponent implements OnInit {
   }
 
   getTasks() {
-  this.taskService.getTasks().subscribe((tasksList) =>
-    this.tasksList = tasksList)
-}
+    this.taskService.getTasks().subscribe((tasksList) =>
+      this.tasksList = tasksList)
+  }
 
-addTasks(task: FormGroup) {
-  this.taskService.addTask(task).subscribe();
-}
+  addTasks(task: FormGroup) {
+    this.taskService.addTask(task).subscribe();
+  }
 
-toggleTask(task: Task) {
-  task.finished = !task.finished;
-  this.taskService.updateTask(task).subscribe();
-}
+  toggleTask(task: Task) {
+    task.finished = !task.finished;
+    this.taskService.updateTask(task).subscribe();
+  }
+
+  deleteTask(task: Task) {
+    this.taskService.deleteTask(task).subscribe();
+  }
 }
 

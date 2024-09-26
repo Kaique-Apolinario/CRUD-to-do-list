@@ -22,40 +22,7 @@
       "id": "fb45",
       "task_name": "dfsdfs",
       "category": "sdfsdfs",
-      "finished": false
-    },
-    {
-      "id": "f715",
-      "task_name": "dfsdfs",
-      "category": "sdfsdfs",
-      "finished": false
-    },
-    {
-      "id": "8841",
-      "task_name": "fghj",
-      "category": "gfhj",
-      "finished": false
-    },
-    {
-      "id": "3985",
-      "task_name": "Gumgume",
-      "category": "Gumgumer",
-      "finished": false
-    },
-    {
-      "id": "5aa6",
-      "task_name": "Jigum",
-      "category": "Noegelo"
-    },
-    {
-      "id": "47d5",
-      "task_name": "",
-      "category": ""
-    },
-    {
-      "id": "369c",
-      "task_name": "",
-      "category": ""
+      "finished": true
     }
   ]
 }
