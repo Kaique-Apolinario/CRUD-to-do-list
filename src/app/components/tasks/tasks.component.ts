@@ -4,11 +4,13 @@ import { Task } from '../../../Task';
 import { CommonModule } from '@angular/common';
 import { TaskItemComponent } from '../task-item/task-item.component';
 import { FormGroup } from '@angular/forms';
+import { HeaderComponent } from "../header/header.component";
+import { AddTaskComponent } from "../add-task/add-task.component";
 
 @Component({
   selector: 'app-tasks',
   standalone: true,
-  imports: [CommonModule, TaskItemComponent],
+  imports: [CommonModule, TaskItemComponent, HeaderComponent, AddTaskComponent],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css'
 })
@@ -29,7 +31,7 @@ export class TasksComponent implements OnInit {
 }
 
 addTasks(task: FormGroup) {
-  this.taskService.addTask(task.value).subscribe();
+  this.taskService.addTask(task).subscribe();
 }
 
 toggleTask(task: Task) {

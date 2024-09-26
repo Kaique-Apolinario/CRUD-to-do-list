@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Task } from '../../Task';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +17,8 @@ export class TasksService {
     return this.http.get<Task[]>(this.apiUrl);
   }
 
-  addTask(task:Task):Observable<Task>{
-    return this.http.post<Task>(this.apiUrl, task);
+  addTask(task:FormGroup):Observable<Task>{
+    return this.http.post<Task>(this.apiUrl, task.value);
   }
 
   getById(id:Number):Observable<Task>{

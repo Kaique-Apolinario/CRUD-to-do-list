@@ -1,12 +1,14 @@
 <form [formGroup]="addTaskForms" (ngSubmit)="addTask()">
     <div>
         <label for="taskname">Task name: </label>
-        <input type="text" id="taskname"  formControlName="task_name">
+        <input type="text" id="taskname" formControlName="task_name">
         <br>
         <label for="category">Category: </label>
-        <input type="text" id="category"  formControlName="category">
+        <input type="text" id="category" formControlName="category">
         <br>
-        <button type="submit">Submit</button>
+        <div class="buttonGroup">
+            <button type="submit">Submit</button>
+            <button type="button" routerLink="">Return</button>
+        </div>
     </div>
-
 </form>
