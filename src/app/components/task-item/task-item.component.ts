@@ -25,7 +25,7 @@ export class TaskItemComponent {
     this.onToggleTask.emit(task);
   }
 
-  deleteTask(task) {
+  deleteTask(task:Task) {
     this.onDeleteTask.emit(task);
   }
 }

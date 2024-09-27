@@ -27,7 +27,7 @@ export class TasksComponent implements OnInit {
 
   getTasks() {
     this.taskService.getTasks().subscribe((tasksList) =>
-      this.tasksList = tasksList)
+      this.tasksList = tasksList);
   }
 
   addTasks(task: FormGroup) {
@@ -40,7 +40,5 @@ export class TasksComponent implements OnInit {
   }
 
   deleteTask(task: Task) {
-    this.taskService.deleteTask(task).subscribe();
-  }
+    this.taskService.deleteTask(task).subscribe((deletedTask) => this.tasksList = this.tasksList.filter(element => element.id !== deletedTask.id))}
 }
-

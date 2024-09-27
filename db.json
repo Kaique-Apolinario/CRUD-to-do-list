@@ -1,28 +1,3 @@
 {
-  "tasks": [
-    {
-      "id": "1",
-      "task_name": "abobra",
-      "category": "sex",
-      "finished": false
-    },
-    {
-      "id": "2",
-      "task_name": "papel",
-      "category": "religious",
-      "finished": false
-    },
-    {
-      "id": "3",
-      "task_name": "seila",
-      "category": "good vibes",
-      "finished": false
-    },
-    {
-      "id": "fb45",
-      "task_name": "dfsdfs",
-      "category": "sdfsdfs",
-      "finished": true
-    }
-  ]
+  "tasks": []
 }
