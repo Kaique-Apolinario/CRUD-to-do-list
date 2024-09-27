@@ -4,11 +4,12 @@ import { Task } from 'zone.js/lib/zone-impl';
 import { TasksComponent } from '../tasks/tasks.component';
 import { Router, RouterModule } from '@angular/router';
 import { TasksService } from '../../services/tasks.service';
+import { SubmitReturnButtonsComponent } from "../shared/submit-return-buttons/submit-return-buttons.component";
 
 @Component({
   selector: 'app-add-task',
   standalone: true,
-  imports: [TasksComponent, ReactiveFormsModule, RouterModule],
+  imports: [TasksComponent, ReactiveFormsModule, RouterModule, SubmitReturnButtonsComponent],
   templateUrl: './add-task.component.html',
   styleUrl: './add-task.component.css'
 })
