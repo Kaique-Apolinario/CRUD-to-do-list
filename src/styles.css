@@ -5,3 +5,7 @@ app-root {
     justify-content: center;
     height: 100vh;
 }
+
+body {
+    margin: 0;
+}

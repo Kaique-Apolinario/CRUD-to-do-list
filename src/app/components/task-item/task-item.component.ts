@@ -32,7 +32,7 @@ export class TaskItemComponent {
     this.onDeleteTask.emit(task);
   }
 
-  updateTask(task:Task){
-    this.onUpdateTask.emit(task);
+  updateTask(oldTask:Task){
+    this.onUpdateTask.emit(oldTask);
   }
 }

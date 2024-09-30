@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Output,  } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Task } from 'zone.js/lib/zone-impl';
 import { TasksComponent } from '../tasks/tasks.component';
 import { Router, RouterModule } from '@angular/router';
 import { TasksService } from '../../services/tasks.service';
@@ -23,11 +22,20 @@ export class AddTaskComponent{
     category: new FormControl("")
   });
   
+  @Output() onAddTask = new EventEmitter<FormGroup>();
 
-addTask() {
-  console.log(this.addTaskForms.value);
-  this.taskService.addTask(this.addTaskForms).subscribe();
-  this.router.navigateByUrl("");
+  addTask() {
+    this.taskService.addTask(this.addTaskForms).subscribe({
+      next: (response) => {// Dando certo, reproduz o código abaixo
+        console.log('Tarefa adicionada:', response);
+        this.onAddTask.emit(this.addTaskForms);
+        this.router.navigateByUrl("");
+      },
+      error: (err) => { // Dando erro, reproduz o código abaixo
+        console.error('Erro ao adicionar tarefa:', err);
+        // Aqui lida com erros, se necessário
+      }
+    });
   }
 }
 

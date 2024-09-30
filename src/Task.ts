@@ -1,6 +1,6 @@
 export interface Task{
     id?: number;
     task_name: string;
-    categoty: string,
+    category: string,
     finished: boolean
 }

@@ -16,7 +16,6 @@ import { AddTaskComponent } from "../add-task/add-task.component";
 })
 export class TasksComponent implements OnInit {
 
-
   tasksList: Task[] = [];
 
   constructor(private taskService: TasksService) { }
@@ -25,28 +24,21 @@ export class TasksComponent implements OnInit {
     this.getTasks();
   }
 
+
   getTasks() {
     this.taskService.getTasks().subscribe((tasksList) =>
       this.tasksList = tasksList);
   }
 
-  addTasks(task: FormGroup) {
-    this.taskService.addTask(task).subscribe();
-    this.getTasks();
-  }
-
   toggleTask(task: Task) {
     task.finished = !task.finished;
-    this.taskService.updateTask(task).subscribe();
+    this.taskService.updateToggleTask(task).subscribe();
   }
 
   deleteTask(task: Task) {
     this.taskService.deleteTask(task).subscribe((deletedTask) => this.tasksList = this.tasksList.filter(element => element.id !== deletedTask.id))
   }
 
-  updateTask(task: Task) {
-    this.taskService.updateTask(task).subscribe();
-  }
 }
 
 
