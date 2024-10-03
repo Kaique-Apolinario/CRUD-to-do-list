@@ -11,7 +11,7 @@ export class TasksService {
 
   constructor(private http: HttpClient) { }
 
-  private apiUrl: string = "http://localhost:3000/tasks";
+  private apiUrl: string = "http://localhost:8080/";
 
   getTasks():Observable<Task[]>{
     return this.http.get<Task[]>(this.apiUrl);
@@ -26,11 +26,11 @@ export class TasksService {
   }
 
   updateToggleTask(task:Task):Observable<Task>{
-    return this.http.put<Task>(this.apiUrl + "/"+ task.id, task);
+    return this.http.put<Task>(this.apiUrl + task.id, task);
   }
 
   deleteTask(task:Task):Observable<Task>{
-    return this.http.delete<Task>(this.apiUrl + "/" + task.id);
+    return this.http.delete<Task>(this.apiUrl + task.id);
   }
 
 }
