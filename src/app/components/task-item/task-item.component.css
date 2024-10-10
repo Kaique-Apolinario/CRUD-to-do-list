@@ -4,15 +4,13 @@ div {
     padding: 10px 20px;
     margin: 10px 0px;
     font-size: 10px;
-    background-color: rgb(245, 255, 55);
+    background-color: #f5ff37;
 }
+
+
 
 div:hover {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 20px, rgba(0, 0, 0, 0.5) 0px -1px 10px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-h1 {
-    margin: 0;
 }
 
 .concluded {
@@ -23,6 +21,8 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 10px 15px;
+    gap: 20px;
 }
 
 .faTrash:hover {

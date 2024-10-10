@@ -1,22 +1,5 @@
 .taskArea {
     max-height: 50vh;
-    overflow: auto;
+    overflow: hidden auto;
     padding-right: 10px;
-}
-
-.taskArea::-webkit-scrollbar {
-    width: 30px;
-}
-
-.taskArea::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-.taskArea::-webkit-scrollbar-thumb {
-    background-image: url('../../../assets/scroll-bar.png'); 
-    background-repeat: no-repeat, no-repeat;
-}
-
-app-task-item {
-    margin: 100px 0px;
 }
